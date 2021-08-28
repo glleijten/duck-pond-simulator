@@ -2,6 +2,7 @@
 
 namespace Fittinq\DuckPond\Duck;
 
+use Error;
 use UnexpectedValueException;
 
 class DuckFactory
@@ -11,6 +12,14 @@ class DuckFactory
      */
     public function letThereBeDuck($duck)
     {
-        throw new UnexpectedValueException("This duck is not yet known");
+        try {
+        $duck = new $duck();
+        } catch (Error) {
+            if (!$duck instanceof Duck) {
+                throw new UnexpectedValueException("This duck is not yet known");
+            }
+        }
+
+        return $duck;
     }
 }
