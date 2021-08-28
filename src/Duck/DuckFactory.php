@@ -9,8 +9,10 @@ class DuckFactory
 {
     /**
      * @throws UnexpectedValueException
+     *
+     * @return Duck
      */
-    public function letThereBeDuck($duck)
+    public function letThereBeDuck($duck): Duck
     {
         try {
         $duck = new $duck();

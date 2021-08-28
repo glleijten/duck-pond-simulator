@@ -27,14 +27,6 @@ class RubberDuck extends Duck
     /**
      * @return string
      */
-    public function getName(): string
-    {
-        return strstr(__CLASS__, 'Fittinq\DuckPond\Duck\\');
-    }
-
-    /**
-     * @return string
-     */
     public function swim(): string
     {
         return Parent::swim();
