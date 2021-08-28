@@ -5,7 +5,6 @@ namespace Fittinq\DuckPond\Duck;
 use Fittinq\DuckPond\Constants\Display;
 use Fittinq\DuckPond\Constants\Fly;
 use Fittinq\DuckPond\Constants\Quack;
-use Fittinq\DuckPond\Constants\Swim;
 
 class RubberDuck extends Duck
 {
@@ -38,7 +37,7 @@ class RubberDuck extends Duck
      */
     public function swim(): string
     {
-        return Swim::SPLASH_SPLASH;
+        return Parent::swim();
     }
 
     /**

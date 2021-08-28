@@ -4,10 +4,8 @@ namespace Fittinq\DuckPond\Duck;
 
 use Fittinq\DuckPond\Constants\Display;
 use Fittinq\DuckPond\Constants\Fly;
-use Fittinq\DuckPond\Constants\Quack;
-use Fittinq\DuckPond\Constants\Swim;
 
-class RobotDuck extends Duck
+class RobotDuck extends WoodenDecoyDuck
 {
     /**
      * @return string
@@ -22,7 +20,7 @@ class RobotDuck extends Duck
      */
     public function quack(): string
     {
-        return Quack::NO_QUACK;
+        return Parent::quack();
     }
 
     /**
@@ -38,7 +36,7 @@ class RobotDuck extends Duck
      */
     public function swim(): string
     {
-        return Swim::SPLASH_SPLASH;
+        return Parent::swim();
     }
 
     /**
